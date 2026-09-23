@@ -344,7 +344,7 @@ cells:
       SELECT
       SUM( quantity )
       FROM
-      order_itens;
+      order_items;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -361,7 +361,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-      order-id,
+      order_id,
       SUM( quantity * unit_price ) order_total
       FROM
       order_items
@@ -373,7 +373,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-      order-id,
+      order_id,
       SUM( quantity * unit_price ) order_total
       FROM
       order_items
@@ -388,7 +388,7 @@ cells:
     value: |
       SELECT
       product_name,
-      SUM( quantity * untt_price ) sales
+      SUM( quantity * unit_price ) sales
       FROM
       order_items
       INNER JOIN products
